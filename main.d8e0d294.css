@@ -27,18 +27,30 @@ article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,secti
     border-radius:6px
 }
 
-/* .img-dog {
-    position:absolute;
-    rotate: 90deg;
-    height: 7.5vh;
-    width: 2.5vw;
-} */
 .btn-contact {
     position: absolute;
     right: 0;
     width: 10vw;
     height: 7vh;
     margin: 50px 50px 50px;
+}
+.btn-view {
+    color:#FFFFFF;
+    background-color:#141C3A;
+    border-radius:50px;
+    /* border-color:#7510F7; */
+    border: 1px solid #7510F7;
+
+    transition: 500ms;
+    width: 40%;
+    height: 15%;
+}
+
+.btn-view:hover {
+    color:#FFFFFF;
+    background-color: #7510F7;
+    border-radius:50px;
+    border-color:#7510F7;
 }
 .intro-param{
     font-size: 18px;
@@ -168,7 +180,9 @@ article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,secti
 .grid-item h3 {
     color: #7510F7;
 }
-
+.mt-10 {
+    margin-top: 1em;
+}
 .grid-cert {
     align-items: center;
     justify-content: center;
@@ -176,10 +190,7 @@ article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,secti
     width: 100%;
     margin: auto;
     grid-template-columns: 45% 45%;
-    /* grid-column-gap: 50px; */
-}
-.grid-cert-item {
-
+    grid-column-gap: 30px;
 }
 .flex-container {
     align-items: center;
@@ -205,20 +216,42 @@ article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,secti
     width: 50px;
 }
 .img-cert {
-    border-radius:6px;
+    position: relative;
+    border-radius:10px;
     border: 1px solid black;
-    width: 90%;
+    width: 100%;
     height: 50vh;
     transition: 500ms;
 }
-.img-cert:hover {
-    opacity: 0.3;
+.grid-cert-item {
+    text-align: center;
+    align-items: center;
+    position: relative;
+    opacity: 1;
+    transition: 500ms;
+}
+.grid-cert-item:hover .img-cert{
+    opacity: 0.2;
+}
+.grid-cert-item:hover .cert-caption {
+    opacity: 1;
 }
 
-.test {
-    align-self: center;
-    align-items: center;
+.cert-caption {
+    position: absolute;
+    opacity: 0;
+    left: 0;
+    width: 100%;
+    height: 50vh;
+    border-radius:10px;
+    border: 1px solid black;
+    background-color: #141C3A;
+    transition: 500ms;
 }
+/* .cert-caption:hover {
+    opacity: 1;
+} */
+
 .gif {
     position: absolute;
     right: 25%;
